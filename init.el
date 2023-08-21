@@ -27,8 +27,7 @@
   :init
   (setq evil-want-C-u-scroll t
 	evil-undo-system 'undo-redo)
-  :config
-  (evil-mode 1))
+  :config (evil-mode 1))
 (use-package vertico
   :ensure t
   :config (vertico-mode 1))
@@ -42,8 +41,7 @@
 	completion-category-overrides '((file (styles basic partial-completion)))))
 (use-package consult
   :ensure t
-  :init
-  (setq consult-find-args "find")
+  :init (setq consult-find-args "find")
   :config
   (keymap-global-set "C-c f" 'consult-find)
   (keymap-global-set "C-c g" 'consult-grep)
@@ -51,10 +49,8 @@
   (keymap-global-set "C-c b" 'consult-buffer))
 (use-package corfu
   :ensure t
-  :init
-  (setq corfu-auto t)
-  :config
-  (global-corfu-mode 1))
+  :init (setq corfu-auto t)
+  :config (global-corfu-mode 1))
 (use-package which-key
   :ensure t
   :config (which-key-mode 1))
