@@ -10,7 +10,6 @@ alias grep='grep --color=auto'
 
 PS1='[\u@\h \W]\$ '
 
-export COLORTERM='truecolor'
 export EDITOR='vim'
 
 edit() {
