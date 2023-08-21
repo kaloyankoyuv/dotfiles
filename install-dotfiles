@@ -9,6 +9,9 @@ ln -sf ~/dotfiles/vimrc ~/.vim/vimrc
 mkdir -p ~/.config/emacs
 ln -sf ~/dotfiles/init.el ~/.config/emacs/init.el
 
+mkdir -p ~/.config/tmux
+ln -sf ~/dotfiles/tmux.conf ~/.config/tmux/tmux.conf
+
 cd dwm/ && sudo make clean install
 cd ..
 
