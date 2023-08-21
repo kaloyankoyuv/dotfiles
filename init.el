@@ -4,6 +4,7 @@
       scroll-conservatively 1000
       scroll-margin 5
       ring-bell-function 'ignore
+      display-line-numbers-type 'relative
       custom-file "~/.config/emacs/custom.el")
 
 (menu-bar-mode 0)
