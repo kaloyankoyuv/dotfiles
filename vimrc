@@ -1,1 +1,0 @@
-/home/kkoyuv/.vim/vimrc

@@ -1,1 +1,0 @@
-/home/kkoyuv/.xinitrc
