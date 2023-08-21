@@ -1,0 +1,1 @@
+/home/kkoyuv/.config/st-0.9/
