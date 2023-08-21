@@ -1,10 +1,10 @@
 #!/bin/bash
 
-ln -s bashrc $HOME/.bashrc
-ln -s xinitrc $HOME/.xinitrc
+ln -sf ~/dotfiles/bashrc ~/.bashrc
+ln -sf ~/dotfiles/xinitrc ~/.xinitrc
 
 mkdir -p $HOME/.vim
-ln -s vimrc $HOME/.vim/vimrc
+ln -sf ~/dotfiles/vimrc ~/.vim/vimrc
 
 mkdir -p $HOME/.config/emacs
-ln -s init.el $HOME/.config/emacs/init.el
+ln -sf ~/dotfiles/init.el ~/.config/emacs/init.el
