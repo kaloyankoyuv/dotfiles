@@ -11,4 +11,4 @@ set hlsearch
 set ignorecase
 set smartcase
 
-nnoremap <leader>d :e `find -type f \\| dmenu -l 16`<cr>
+nnoremap <leader>f :e `find -type f \\| dmenu -l 16`<cr>
