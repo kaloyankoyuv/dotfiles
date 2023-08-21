@@ -1,3 +1,5 @@
+vim9script
+
 source $VIMRUNTIME/defaults.vim
 
 set viminfofile=~/.vim/viminfo
@@ -9,7 +11,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
-let g:mapleader = " "
+g:mapleader = " "
 
 colorscheme retrobox
 
