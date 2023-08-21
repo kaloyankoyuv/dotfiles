@@ -13,9 +13,6 @@ PS1='[\u@\h \W]\$ '
 export COLORTERM='truecolor'
 export EDITOR='vim'
 
-search() {
-	links html.duckduckgo.com/html/?q="$(echo "$@" | sed s/' '/+/g)"
-}
 edit() {
 	$EDITOR $(find "$@" -type f | fzf -m)
 }
@@ -25,7 +22,6 @@ go() {
 
 alias g=go
 alias e=edit
-alias s=search
 
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
 	exec tmux >/dev/null 2>&1
