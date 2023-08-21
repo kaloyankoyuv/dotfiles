@@ -8,3 +8,10 @@ ln -sf ~/dotfiles/vimrc ~/.vim/vimrc
 
 mkdir -p $HOME/.config/emacs
 ln -sf ~/dotfiles/init.el ~/.config/emacs/init.el
+
+cd dwm/ && sudo make clean install
+cd ..
+cd st/ && sudo make clean install
+cd ..
+cd dmenu/ && sudo make clean install
+cd ..
