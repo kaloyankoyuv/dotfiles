@@ -19,7 +19,7 @@ edit() {
 	$EDITOR $(find "$@" -type f | fzf -m)
 }
 rgrep() {
-	$EDITOR $(grep -ri "$@" | dmenu -l 16 | awk '{print $1}' | sed s/://g)
+	$EDITOR $(grep -ri "$@" | dmenu -l 16 | awk -F':' '{print $1}')
 }
 go() {
 	cd $(find "$@" -type d | fzf) && clear && ls
