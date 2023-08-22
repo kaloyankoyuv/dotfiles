@@ -22,7 +22,7 @@ rgrep() {
 	result="$(grep -rin "$@" | dmenu -l 16)"
 	file="$(echo $result | awk -F ':' '{print $1}')"
 	line="$(echo $result | awk -F ':' '{print $2}')"
-	$EDITOR \+$line $file
+	vim \+$line $file
 }
 go() {
 	cd $(find "$@" -type d | fzf) && clear && ls
