@@ -12,6 +12,9 @@ ln -sf ~/dotfiles/init.el ~/.config/emacs/init.el
 mkdir -p ~/.config/tmux
 ln -sf ~/dotfiles/tmux.conf ~/.config/tmux/tmux.conf
 
+mkdir -p ~/.config/alacritty
+ln -sf ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+
 cd dwm/ && sudo make clean install
 cd ..
 
