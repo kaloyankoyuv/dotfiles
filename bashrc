@@ -18,12 +18,16 @@ export EDITOR='vim'
 edit() {
 	$EDITOR $(find "$@" -type f | fzf -m)
 }
+rgrep() {
+	$EDITOR $(grep -ri "$@" | dmenu -l 16 | awk '{print $1}' | sed s/://g)
+}
 go() {
 	cd $(find "$@" -type d | fzf) && clear && ls
 }
 
 alias g=go
 alias e=edit
+alias rg=rgrep
 
 eval "$(starship init bash)"
 
