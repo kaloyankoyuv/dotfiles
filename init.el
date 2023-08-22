@@ -18,16 +18,20 @@
 (add-to-list 'default-frame-alist
              '(font . "JetBrainsMono Nerd Font-10"))
 
+(keymap-global-set "C-c f" 'find-name-dired)
+(keymap-global-set "C-c g" 'rgrep)
+(keymap-global-set "C-c b" 'ibuffer)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(use-package evil
-  :ensure t
-  :init
-  (setq evil-want-C-u-scroll t
-	evil-undo-system 'undo-redo)
-  :config (evil-mode 1))
+;;(use-package evil
+;;  :ensure t
+;;  :init
+;;  (setq evil-want-C-u-scroll t
+;;	evil-undo-system 'undo-redo)
+;;  :config (evil-mode 1))
 (use-package vertico
   :ensure t
   :config (vertico-mode 1))
@@ -39,18 +43,23 @@
   :init
   (setq completion-styles '(orderless basic)
 	completion-category-overrides '((file (styles basic partial-completion)))))
-(use-package consult
-  :ensure t
-  :init (setq consult-find-args "find")
-  :config
-  (keymap-global-set "C-c f" 'consult-find)
-  (keymap-global-set "C-c g" 'consult-grep)
-  (keymap-global-set "C-c s" 'consult-line)
-  (keymap-global-set "C-c b" 'consult-buffer))
+;;(use-package consult
+;;  :ensure t
+;;  :init (setq consult-find-args "find")
+;;  :config
+;;  (keymap-global-set "C-c f" 'consult-find)
+;;  (keymap-global-set "C-c g" 'consult-grep)
+;;  (keymap-global-set "C-c s" 'consult-line)
+;;  (keymap-global-set "C-c b" 'consult-buffer))
 (use-package corfu
   :ensure t
   :init (setq corfu-auto t)
   :config (global-corfu-mode 1))
+(use-package cape
+  :ensure t
+  :config
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  (add-to-list 'completion-at-point-functions #'cape-file))
 (use-package which-key
   :ensure t
   :config (which-key-mode 1))
