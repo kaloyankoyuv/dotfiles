@@ -56,13 +56,10 @@
   :config (which-key-mode 1))
 (use-package magit
   :ensure t)
-(use-package modus-themes
+(use-package doom-themes
   :ensure t
-  :config (load-theme 'modus-vivendi t))
-;;(use-package doom-themes
-;;  :ensure t
-;;  :config (load-theme 'doom-one t))
-;;(use-package doom-modeline
-;;  :ensure t
-;;  :config (doom-modeline-mode 1))
+  :config (load-theme 'doom-one t))
+(use-package doom-modeline
+  :ensure t
+  :config (doom-modeline-mode 1))
 
