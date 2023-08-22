@@ -16,7 +16,7 @@
 (electric-pair-mode 1)
 
 (add-to-list 'default-frame-alist
-             '(font . "JetBrains Mono-10"))
+             '(font . "JetBrainsMono Nerd Font-10"))
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
