@@ -12,6 +12,7 @@ PS1='[\u@\h \W]\$ '
 
 set -o vi
 
+export COLORTERM='truecolor'
 export EDITOR='vim'
 
 edit() {
