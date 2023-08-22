@@ -10,13 +10,10 @@ alias grep='grep --color=auto'
 
 PS1='[\u@\h \W]\$ '
 
-set -o vi
-
 export COLORTERM='truecolor'
-export EDITOR='vim'
 
 edit() {
-	$EDITOR $(find "$@" -type f | fzf -m)
+	vim $(find "$@" -type f | fzf -m)
 }
 rgrep() {
 	result="$(grep -rin "$@" | dmenu -l 16)"
@@ -33,7 +30,4 @@ alias e=edit
 alias rg=rgrep
 
 eval "$(starship init bash)"
-
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
-	exec tmux >/dev/null 2>&1
-fi
+eval "$(zellij setup --generate-auto-start bash)"
