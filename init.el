@@ -26,12 +26,12 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(use-package evil
-  :ensure t
-  :init
-  (setq evil-want-C-u-scroll t
-	evil-undo-system 'undo-redo)
-  :config (evil-mode 1))
+;;(use-package evil
+;;  :ensure t
+;;  :init
+;;  (setq evil-want-C-u-scroll t
+;;	evil-undo-system 'undo-redo)
+;;  :config (evil-mode 1))
 (use-package vertico
   :ensure t
   :config (vertico-mode 1))
