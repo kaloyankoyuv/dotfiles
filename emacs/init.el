@@ -5,7 +5,7 @@
       scroll-margin 5
       ring-bell-function 'ignore
       display-line-numbers-type 'relative
-      custom-file "~/.config/emacs/custom.el")
+      custom-file "~/dotfiles/emacs/custom.el")
 
 (menu-bar-mode 0)
 (tool-bar-mode 0)

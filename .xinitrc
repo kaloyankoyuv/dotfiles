@@ -49,7 +49,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap -layout "us,bg(phonetic)" -option grp:toggle -option ctrl:nocaps
-xwallpaper --maximize ~/dotfiles/wallpaper.jpg
+xwallpaper --maximize ~/dotfiles/wallpapers/wallpaper.jpg
 
 while true
 do

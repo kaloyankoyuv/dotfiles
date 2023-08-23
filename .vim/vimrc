@@ -1,6 +1,6 @@
 source $VIMRUNTIME/defaults.vim
 
-set viminfofile=~/.vim/viminfo
+set viminfofile=~/dotfiles/.vim/viminfo
 set background=dark
 set number
 set relativenumber
