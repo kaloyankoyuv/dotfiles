@@ -1,5 +1,7 @@
 .vim/**
 !.vim/vimrc
 .config/**
+!.config/emacs/
+!.config/zellij/
 !.config/emacs/init.el
 !.config/zellij/config.kdl
