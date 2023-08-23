@@ -26,12 +26,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;;(use-package evil
-;;  :ensure t
-;;  :init
-;;  (setq evil-want-C-u-scroll t
-;;	evil-undo-system 'undo-redo)
-;;  :config (evil-mode 1))
 (use-package vertico
   :ensure t
   :config (vertico-mode 1))
@@ -43,14 +37,6 @@
   :init
   (setq completion-styles '(orderless basic)
 	completion-category-overrides '((file (styles basic partial-completion)))))
-;;(use-package consult
-;;  :ensure t
-;;  :init (setq consult-find-args "find")
-;;  :config
-;;  (keymap-global-set "C-c f" 'consult-find)
-;;  (keymap-global-set "C-c g" 'consult-grep)
-;;  (keymap-global-set "C-c s" 'consult-line)
-;;  (keymap-global-set "C-c b" 'consult-buffer))
 (use-package corfu
   :ensure t
   :init (setq corfu-auto t)
