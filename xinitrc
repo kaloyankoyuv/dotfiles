@@ -50,7 +50,7 @@ fi
 
 setxkbmap -layout "us,bg(phonetic)" -option grp:toggle -option ctrl:nocaps
 
-while xsetroot -name " `date`"
+while xsetroot -name " `date` | BAT: `acpi | awk '{print $4}' | sed s/,//g` "
 do
     sleep 1
 done &
