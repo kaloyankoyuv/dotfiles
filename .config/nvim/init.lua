@@ -23,7 +23,5 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.scrolloff = 5
 
-vim.g.mapleader = " "
-
 vim.cmd([[colorscheme tokyonight]])
 vim.cmd([[nnoremap <leader>f :e `find -type f \\| dmenu -l 16`<cr>]])
