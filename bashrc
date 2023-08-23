@@ -17,7 +17,7 @@ edit() {
 	vim $(find "$@" -type f | fzf -m)
 }
 rgrep() {
-	result="$(grep -rin "$@" | dmenu -l 16)"
+	result="$(grep -rin "$@" | fzf)"
 	file="$(echo $result | awk -F ':' '{print $1}')"
 	line="$(echo $result | awk -F ':' '{print $2}')"
 	vim \+$line $file
