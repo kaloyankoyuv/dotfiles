@@ -17,7 +17,7 @@ edit() {
 	$EDITOR $(find "$@" -type f | fzf -m)
 }
 rgrep() {
-	result="$(grep -rin "$@" | fzf)"
+	result="$(grep -rin "$@" | fzf -m)"
 	file="$(echo $result | awk -F ':' '{print $1}')"
 	line="$(echo $result | awk -F ':' '{print $2}')"
 	$EDITOR \+$line $file
