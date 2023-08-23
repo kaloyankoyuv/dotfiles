@@ -50,9 +50,10 @@ fi
 
 setxkbmap -layout "us,bg(phonetic)" -option grp:toggle -option ctrl:nocaps
 
-while xsetroot -name " `date` | BAT: `acpi | awk '{print $4}' | sed s/,//g` "
+while true
 do
-    sleep 1
+	xsetroot -name " BAT: `acpi | awk '{print $4}' | sed s/,//g` | VOL: `amixer | awk 'NR==5 {print $4}' | sed -e s/"\["// -e s/"\]"//` | `date`"
+	sleep 1
 done &
 
 exec dwm
