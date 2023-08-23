@@ -9,4 +9,8 @@ set hlsearch
 set ignorecase
 set smartcase
 
+let mapleader = " "
+
 colorscheme retrobox
+
+nnoremap <leader>f :e `find -type f \\| dmenu -l 16`<cr>
