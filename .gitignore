@@ -1,5 +1,3 @@
-.vim/**
-!.vim/vimrc
 .config/**
 !.config/emacs/
 !.config/zellij/

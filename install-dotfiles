@@ -2,7 +2,6 @@
 
 ln -sf ~/dotfiles/.bashrc ~/
 ln -sf ~/dotfiles/.xinitrc ~/
-ln -sf ~/dotfiles/.vim ~/
 ln -sf ~/dotfiles/.config ~/
 
 cd dwm/ && sudo make clean install
