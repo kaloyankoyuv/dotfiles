@@ -59,8 +59,8 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *volup[]    = { "amixer", "set", "Master", "5+", NULL };
-static const char *voldown[]  = { "amixer", "set", "Master", "5-", NULL };
+static const char *volup[]    = { "amixer", "set", "Master", "5%+", NULL };
+static const char *voldown[]  = { "amixer", "set", "Master", "5%-", NULL };
 static const char *volmute[]  = { "amixer", "set", "Master", "toggle", NULL };
 static const char *micmute[]  = { "amixer", "set", "Capture", "toggle", NULL };
 
