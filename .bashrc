@@ -11,16 +11,16 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 export COLORTERM='truecolor'
-export EDITOR='vim'
+export EDITOR='nvim'
 
 edit() {
-	vim $(find "$@" -type f | fzf -m)
+	$EDITOR $(find "$@" -type f | fzf -m)
 }
 rgrep() {
 	result="$(grep -rin "$@" | fzf)"
 	file="$(echo $result | awk -F ':' '{print $1}')"
 	line="$(echo $result | awk -F ':' '{print $2}')"
-	vim \+$line $file
+	$EDITOR \+$line $file
 }
 go() {
 	cd $(find "$@" -type d | fzf) && clear && ls
