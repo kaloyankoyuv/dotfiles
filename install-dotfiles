@@ -2,11 +2,11 @@
 
 mkdir -p ~/.config
 
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.xinitrc ~/.xinitrc
-ln -sf ~/dotfiles/.vim ~/.vim
-ln -sf ~/dotfiles/emacs ~/.config/emacs
-ln -sf ~/dotfiles/zellij ~/.config/zellij
+ln -sf ~/dotfiles/.bashrc ~/
+ln -sf ~/dotfiles/.xinitrc ~/
+ln -sf ~/dotfiles/.vim ~/
+ln -sf ~/dotfiles/emacs ~/.config/
+ln -sf ~/dotfiles/zellij ~/.config/
 
 cd dwm/ && sudo make clean install
 cd ..
