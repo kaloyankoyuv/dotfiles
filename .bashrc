@@ -27,9 +27,5 @@ go() {
 	cd $(find "$@" -type d | fzf) && clear && ls
 }
 
-alias g=go
-alias e=edit
-alias rg=rgrep
-
 eval "$(starship init bash)"
 eval "$(zellij setup --generate-auto-start bash)"
