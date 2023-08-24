@@ -53,7 +53,7 @@ xwallpaper --maximize ~/dotfiles/wallpapers/wallpaper.jpg
 
 while true
 do
-	xsetroot -name " BAT: `acpi | awk '{print $4}' | sed s/,//g` | VOL: `amixer | awk 'NR==5 {print $4}' | sed -e s/"\["// -e s/"\]"//` | `date`"
+	xsetroot -name " BAT: `upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}'` | VOL: `amixer | awk 'NR==5 {print $4}' | sed -e s/"\["// -e s/"\]"//` | `date`"
 	sleep 1
 done &
 
