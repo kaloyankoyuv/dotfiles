@@ -1,7 +1,0 @@
-.config/**
-!.config/emacs/
-!.config/zellij/
-!.config/nvim/
-!.config/emacs/init.el
-!.config/zellij/config.kdl
-!.config/nvim/init.lua

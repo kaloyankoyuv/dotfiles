@@ -10,9 +10,8 @@ alias grep='grep --color=auto'
 
 PS1='[\u@\h \W]\$ '
 
-export LESSHISTFILE='-'
 export COLORTERM='truecolor'
-export EDITOR='nvim'
+export EDITOR='vim'
 
 edit() {
 	$EDITOR $(find "$@" -type f | fzf -m)
@@ -27,5 +26,6 @@ goto() {
 	cd $(find "$@" -type d | fzf) && clear && ls
 }
 
-eval "$(starship init bash)"
-eval "$(zellij setup --generate-auto-start bash)"
+if [ -z "${TMUX}" ]; then
+	tmux
+fi
