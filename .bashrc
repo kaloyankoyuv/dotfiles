@@ -7,6 +7,11 @@
 
 alias ls='ls -lAhFv --group-directories-first --color=auto'
 alias grep='grep --color=auto'
+alias gita='git add'
+alias gitc='git commit -m'
+alias gitp='git push'
+alias gitd='git diff'
+alias gits='git status'
 
 PS1='[\u@\h \W]\$ '
 
