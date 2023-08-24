@@ -23,7 +23,7 @@ rgrep() {
 	line="$(echo $result | awk -F ':' '{print $2}')"
 	$EDITOR \+$line $file
 }
-go() {
+goto() {
 	cd $(find "$@" -type d | fzf) && clear && ls
 }
 
