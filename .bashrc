@@ -12,3 +12,4 @@ alias goto='cd $(find -type d | fzf) && clear && ls'
 PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
+eval "$(zellij setup --generate-auto-start bash)"
