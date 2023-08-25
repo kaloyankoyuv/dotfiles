@@ -11,6 +11,9 @@ alias go='cd $(find -type d | fzf)'
 
 PS1='[\u@\h \W]\$ '
 
+eval "$(starship init bash)"
+
 if [ -z "${TMUX}" ]; then
+    trap 'tmux kill-session' EXIT
     tmux
 fi
