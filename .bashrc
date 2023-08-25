@@ -14,5 +14,3 @@ alias edit='find -type f | fzf -m | xargs -ro $EDITOR'
 
 PS1='[\u@\h \W]\$ '
 
-eval "$(starship init bash)"
-eval "$(zellij setup --generate-auto-start bash)"
