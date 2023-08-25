@@ -5,5 +5,3 @@
 !.config/alacritty/**
 !.config/awesome
 !.config/awesome/**
-!.config/zellij
-!.config/zellij/**
