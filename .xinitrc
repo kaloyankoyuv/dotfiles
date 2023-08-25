@@ -49,6 +49,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap -layout "us,bg(phonetic)" -option grp:toggle -option ctrl:swapcaps
+xwallpaper --maximize ~/dotfiles/wallpaper.jpg
 emacs --daemon
 
-exec awesome
+while true
+do
+    xsetroot -name " $(date)"
+    sleep 1
+done &
+
+exec dwm

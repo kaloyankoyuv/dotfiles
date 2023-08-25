@@ -5,7 +5,7 @@
       scroll-margin 5
       ring-bell-function 'ignore
       display-line-numbers-type 'relative
-      custom-file "~/dotfiles/.config/emacs/custom.el")
+      custom-file "~/.config/emacs/custom.el")
 
 (menu-bar-mode 0)
 (tool-bar-mode 0)
@@ -14,6 +14,8 @@
 (global-display-line-numbers-mode 1)
 (global-hl-line-mode 1)
 (electric-pair-mode 1)
+(display-time-mode 1)
+(display-battery-mode)
 
 (add-to-list 'default-frame-alist
              '(font . "JetBrainsMono Nerd Font-10"))
@@ -21,6 +23,7 @@
 (keymap-global-set "C-c f" 'find-name-dired)
 (keymap-global-set "C-c g" 'rgrep)
 (keymap-global-set "C-c b" 'ibuffer)
+(keymap-global-set "C-c e" 'eshell)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -57,7 +60,3 @@
 (use-package doom-modeline
   :ensure t
   :config (doom-modeline-mode 1))
-(use-package lua-mode
-  :ensure t)
-(use-package yaml-mode
-  :ensure t)
