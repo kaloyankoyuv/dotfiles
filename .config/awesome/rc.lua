@@ -49,7 +49,7 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "mytheme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("EDITOR") or "nano"
+editor = "emacsclient -nc"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -277,6 +277,8 @@ globalkeys = gears.table.join(
    -- Standard program
    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
       {description = "open a terminal", group = "launcher"}),
+   awful.key({ modkey,           }, "e",      function () awful.spawn(editor)   end,
+      {description = "open an editor",  group = "launcher"}),
    awful.key({ modkey, "Control" }, "r", awesome.restart,
       {description = "reload awesome", group = "awesome"}),
    awful.key({ modkey, "Shift"   }, "q", awesome.quit,

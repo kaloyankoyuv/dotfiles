@@ -7,5 +7,6 @@
 
 alias ls='ls -la --color=auto'
 alias grep='grep --color=auto'
+alias goto='cd $(find -type d | fzf) && clear && ls'
 
 PS1='[\u@\h \W]\$ '
