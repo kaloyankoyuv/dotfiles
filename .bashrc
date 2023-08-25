@@ -8,6 +8,7 @@
 alias ls='ls -lAhFv --group-directories-first --color=auto'
 alias grep='grep --color=auto'
 alias go='cd $(find -type d | fzf)'
+alias ed='find | fzf -m | xargs -ro emacsclient -nc'
 
 PS1='[\u@\h \W]\$ '
 
