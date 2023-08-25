@@ -48,12 +48,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-setxkbmap -layout "us,bg(phonetic)" -option grp:toggle -option ctrl:nocaps
+setxkbmap -layout "us,bg(phonetic)" -option grp:toggle -option ctrl:swapcaps
 
-while true
-do
-	xsetroot -name " BAT: $(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}') | VOL: $(amixer | awk 'NR==5 {print $4}' | sed -e s/"\["// -e s/"\]"//) | $(date +'%a %d/%m %R')"
-	sleep 1
-done &
-
-exec dwm
+exec awesome

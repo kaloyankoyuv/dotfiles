@@ -1,14 +1,5 @@
 #!/bin/bash
 
+ln -sf ~/dotfiles/.config ~/
 ln -sf ~/dotfiles/.bashrc ~/
 ln -sf ~/dotfiles/.xinitrc ~/
-ln -sf ~/dotfiles/.vimrc ~/
-
-cd dwm/ && sudo make clean install
-cd ..
-
-cd st/ && sudo make clean install
-cd ..
-
-cd dmenu/ && sudo make clean install
-cd ..

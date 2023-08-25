@@ -4,7 +4,8 @@
       scroll-conservatively 1000
       scroll-margin 5
       ring-bell-function 'ignore
-      display-line-numbers-type 'relative)
+      display-line-numbers-type 'relative
+      custom-file "~/.config/emacs/custom.el")
 
 (menu-bar-mode 0)
 (tool-bar-mode 0)
@@ -25,12 +26,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(use-package evil
-  :ensure t
-  :init
-  (setq evil-want-C-u-scroll t
-	evil-undo-system 'undo-redo)
-  :config (evil-mode 1))
 (use-package vertico
   :ensure t
   :config (vertico-mode 1))
@@ -62,17 +57,7 @@
 (use-package doom-modeline
   :ensure t
   :config (doom-modeline-mode 1))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(doom-modeline doom-themes magit which-key cape corfu orderless marginalia vertico)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(use-package lua-mode
+  :ensure t)
+(use-package yaml-mode
+  :ensure t)

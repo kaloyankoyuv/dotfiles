@@ -1,0 +1,5 @@
+.config/**
+!.config/emacs
+!.config/emacs/init.el
+!.config/alacritty/**
+!.config/awesome/**
