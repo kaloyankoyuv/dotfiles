@@ -15,5 +15,5 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 
 if [ -z "${TMUX}" ]; then
-    tmux new-session -A -s ${USER}
+    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
