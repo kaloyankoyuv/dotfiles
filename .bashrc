@@ -15,6 +15,5 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 
 if [ -z "${TMUX}" ]; then
-    trap 'tmux kill-session' EXIT
-    tmux
+    tmux new-session -A -s ${USER}
 fi
