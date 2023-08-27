@@ -15,7 +15,7 @@
 (global-hl-line-mode 1)
 (electric-pair-mode 1)
 (display-time-mode 1)
-(display-battery-mode)
+(display-battery-mode 1)
 
 (add-to-list 'default-frame-alist
              '(font . "JetBrainsMono Nerd Font-10"))
