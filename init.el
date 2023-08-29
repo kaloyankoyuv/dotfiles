@@ -1,11 +1,13 @@
-(setq make-backup-files nil
-      initial-scratch-message nil
-      inhibit-startup-screen t
-      scroll-conservatively 1000
-      scroll-margin 5
-      ring-bell-function 'ignore
-      display-line-numbers-type 'relative
-      custom-file "~/.config/emacs/custom.el")
+(setq
+ make-backup-files nil
+ initial-scratch-message nil
+ inhibit-startup-screen t
+ scroll-conservatively 1000
+ scroll-margin 5
+ ring-bell-function 'ignore
+ display-line-numbers-type 'relative
+ custom-file "~/.config/emacs/custom.el"
+ )
 
 (menu-bar-mode 0)
 (tool-bar-mode 0)
