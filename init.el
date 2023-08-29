@@ -11,6 +11,7 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (blink-cursor-mode 0)
+(column-number-mode 1)
 (global-display-line-numbers-mode 1)
 (global-hl-line-mode 1)
 (electric-pair-mode 1)
