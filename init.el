@@ -26,6 +26,14 @@
 (keymap-global-set "C-c g" 'rgrep)
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
+(keymap-global-set "C-c t" 'ansi-term)
+
+(defun no-line-and-numbers ()
+  (display-line-numbers-mode 0)
+  (setq-local global-hl-line-mode nil))
+
+(add-hook 'eshell-mode-hook 'no-line-and-numbers)
+(add-hook 'term-mode-hook 'no-line-and-numbers)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
