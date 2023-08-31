@@ -26,14 +26,12 @@
 (keymap-global-set "C-c g" 'rgrep)
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
-(keymap-global-set "C-c t" 'ansi-term)
 
 (defun no-line-and-numbers ()
   (display-line-numbers-mode 0)
   (setq-local global-hl-line-mode nil))
 
 (add-hook 'eshell-mode-hook 'no-line-and-numbers)
-(add-hook 'term-mode-hook 'no-line-and-numbers)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -67,6 +65,16 @@
   :config (which-key-mode 1))
 (use-package magit
   :ensure t)
+(use-package vterm
+  :ensure t
+  :config
+  (use-package multi-vterm
+    :ensure t
+    :config (keymap-global-set "C-c v" 'multi-vterm))
+  (use-package vterm-toggle
+    :ensure t
+    :config (keymap-global-set "C-c t" 'vterm-toggle))
+  (add-hook 'vterm-mode-hook 'no-line-and-numbers))
 (use-package doom-themes
   :ensure t
   :config (load-theme 'doom-one t))
