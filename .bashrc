@@ -17,6 +17,5 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z "${INSIDE_EMACS}" ]; then
-    #exec tmux new-session -A -s ${USER} >/dev/null 2>&1
-    eval "$(zellij setup --generate-auto-start bash)"
+    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
