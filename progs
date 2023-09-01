@@ -5,7 +5,7 @@ Fonts - Noto + JetBrainsMono Nerd Font
 Window manager - dwm
 Launcher - dmenu
 Terminal - st + tmux
-Editor - Emacs
+Editor - Emacs + mg
 Browser - Firefox
 File manager - Nautilus
 Media player - VLC
