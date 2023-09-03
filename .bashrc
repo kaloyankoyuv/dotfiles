@@ -9,7 +9,7 @@ PS1='[\u@\h \W]\$ '
 
 export COLORTERM='truecolor'
 
-alias ls='ls -lAhFv --group-directories-first --color=auto'
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias goto='cd $(find -type d | fzf)'
 alias edit='find | fzf -m | xargs -ro emacsclient -nc'
