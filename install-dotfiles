@@ -2,10 +2,4 @@
 
 ln -sf ~/dotfiles/.bashrc ~/
 ln -sf ~/dotfiles/.xinitrc ~/
-
-mkdir -p ~/.config/emacs
-ln -sf ~/dotfiles/init.el ~/.config/emacs/
-
-cd dwm-6.4 && sudo make clean install && cd ..
-cd st-0.9 && sudo make clean install && cd ..
-cd dmenu-5.2 && sudo make clean install && cd ..
+ln -sf ~/dotfiles/.config ~/
