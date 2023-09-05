@@ -50,4 +50,5 @@ fi
 
 setxkbmap -layout "us,bg(phonetic)" -option grp:toggle -option ctrl:swapcaps
 emacs --daemon
+
 exec awesome
