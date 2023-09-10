@@ -1,5 +1,5 @@
 #!/bin/bash
 
 ln -sf ~/dotfiles/.bashrc ~/
-ln -sf ~/dotfiles/.xinitrc ~/
+ln -sf ~/dotfiles/.xsessionrc ~/
 ln -sf ~/dotfiles/.config ~/
