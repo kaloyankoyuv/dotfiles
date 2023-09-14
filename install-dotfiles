@@ -2,3 +2,4 @@
 
 ln -sf ~/dotfiles/.bashrc ~/
 ln -sf ~/dotfiles/.config ~/
+ln -sf ~/dotfiles/.xinitrc ~/
