@@ -1,0 +1,10 @@
+#!/bin/bash
+
+bm=(
+    "youtube.com"
+    "thepiratebay.org"
+    "aniwave.to"
+    "wiki.archlinux.org"
+)
+
+printf '%s\n' "${bm[@]}" | dmenu -i -l 20 | xargs -r firefox

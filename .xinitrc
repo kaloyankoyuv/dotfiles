@@ -1,5 +1,5 @@
 setxkbmap -layout 'us,bg(phonetic)' -option grp:toggle -option ctrl:swapcaps
-#emacs --daemon
+emacs --daemon
 
 while true; do
     xsetroot -name " $(date)"
