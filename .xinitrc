@@ -6,4 +6,4 @@ while true; do
     sleep 1
 done &
 
-exec dbus-run-session -- dwm
+exec dwm
