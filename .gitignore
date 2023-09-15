@@ -1,4 +1,6 @@
 .config/**
 !.config/emacs
 !.config/emacs/init.el
+!.config/alacritty
+!.config/alacritty/alacritty.yml
 
