@@ -3,7 +3,7 @@ emacs --daemon
 xwallpaper --maximize ~/dotfiles/wallpapers/samurai-doge.jpg
 
 while true; do
-    xsetroot -name " $(date)"
+    xsetroot -name " $(acpi) | $(date)"
     sleep 1
 done &
 
