@@ -5,3 +5,5 @@
 !.config/alacritty/alacritty.yml
 !.config/tmux
 !.config/tmux/tmux.conf
+.vim/**
+!.vim/vimrc
