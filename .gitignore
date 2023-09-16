@@ -3,4 +3,5 @@
 !.config/emacs/init.el
 !.config/alacritty
 !.config/alacritty/alacritty.yml
-
+!.config/tmux
+!.config/tmux/tmux.conf
