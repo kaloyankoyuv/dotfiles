@@ -5,6 +5,7 @@ bm=(
     "thepiratebay.org"
     "aniwave.to/home"
     "wiki.archlinux.org"
+    "google.com/search?q="
 )
 
 printf '%s\n' "${bm[@]}" | dmenu -i -l 20 | xargs -r firefox
