@@ -1,0 +1,6 @@
+#!/bin/bash
+
+result="$(grep -rin "$@" | dmenu -i -l 20)"
+file="$(echo $result | awk -F ':' '{print $1}')"
+line="$(echo $result | awk -F ':' '{print $2}')"
+emacsclient -nc \+$line $file
