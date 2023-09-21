@@ -12,12 +12,10 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (blink-cursor-mode 0)
-(column-number-mode 1)
-(global-display-line-numbers-mode 1)
-(global-hl-line-mode 1)
-(electric-pair-mode 1)
-(display-time-mode 1)
-(display-battery-mode 1)
+(column-number-mode)
+(electric-pair-mode)
+(display-time-mode)
+(display-battery-mode)
 
 (add-to-list 'default-frame-alist
              '(font . "JetBrainsMono Nerd Font-10"))
@@ -27,68 +25,53 @@
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
 
-(defun no-line-and-numbers ()
-  (display-line-numbers-mode 0)
-  (setq-local global-hl-line-mode nil))
-
-(add-hook 'eshell-mode-hook 'no-line-and-numbers)
+(add-hook 'find-file-hook
+	  (lambda ()
+	    (display-line-numbers-mode)
+	    (hl-line-mode)))
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; (use-package evil
-;;   :ensure t
-;;   :init
-;;   (setq evil-want-C-u-scroll t
-;; 	evil-undo-system 'undo-redo)
-;;   :config
-;;   (add-hook 'find-file-hook 'evil-local-mode))
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+(use-package evil
+  :init
+  (setq evil-want-C-u-scroll t
+	evil-undo-system 'undo-redo)
+  (add-hook 'find-file-hook 'evil-local-mode))
 (use-package vertico
-  :ensure t
-  :config (vertico-mode 1))
+  :config (vertico-mode))
 (use-package marginalia
-  :ensure t
-  :config (marginalia-mode 1))
+  :config (marginalia-mode))
 (use-package orderless
-  :ensure t
   :init
   (setq completion-styles '(orderless basic)
 	completion-category-overrides '((file (styles basic partial-completion)))))
 (use-package corfu
-  :ensure t
   :init (setq corfu-auto t)
-  :config (global-corfu-mode 1))
+  :config (global-corfu-mode))
 (use-package cape
-  :ensure t
-  :config
+  :init
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   (add-to-list 'completion-at-point-functions #'cape-abbrev)
   (add-to-list 'completion-at-point-functions #'cape-dict)
   (add-to-list 'completion-at-point-functions #'cape-history)
   (add-to-list 'completion-at-point-functions #'cape-file))
 (use-package which-key
-  :ensure t
-  :config (which-key-mode 1))
-(use-package magit
-  :ensure t)
+  :config (which-key-mode))
+(use-package magit)
 (use-package vterm
-  :ensure t
   :config
   (use-package multi-vterm
-    :ensure t
-    :config (keymap-global-set "C-c v" 'multi-vterm))
+    :init (keymap-global-set "C-c v" 'multi-vterm))
   (use-package vterm-toggle
-    :ensure t
-    :config (keymap-global-set "C-c t" 'vterm-toggle))
-  (add-hook 'vterm-mode-hook 'no-line-and-numbers))
+    :init (keymap-global-set "C-c t" 'vterm-toggle)))
 (use-package doom-themes
-  :ensure t
   :config (load-theme 'doom-one t))
 (use-package doom-modeline
-  :ensure t
-  :config (doom-modeline-mode 1))
-(use-package lua-mode
-  :ensure t)
-(use-package yaml-mode
-  :ensure t)
+  :config (doom-modeline-mode))
+(use-package lua-mode)
+(use-package yaml-mode)
