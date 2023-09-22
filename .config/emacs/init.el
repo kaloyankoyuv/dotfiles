@@ -16,6 +16,7 @@
 (electric-pair-mode)
 (display-time-mode)
 (display-battery-mode)
+(pixel-scroll-precision-mode)
 
 (add-to-list 'default-frame-alist
              '(font . "JetBrainsMono Nerd Font-10"))
