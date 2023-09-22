@@ -73,5 +73,10 @@
   :config (load-theme 'doom-one t))
 (use-package doom-modeline
   :config (doom-modeline-mode))
+(use-package minimap
+  :init (setq minimap-window-location 'right)
+  :config (minimap-mode))
+(use-package beacon
+  :config (beacon-mode))
 (use-package lua-mode)
 (use-package yaml-mode)
