@@ -19,7 +19,7 @@
 (pixel-scroll-precision-mode)
 
 (add-to-list 'default-frame-alist
-             '(font . "JetBrainsMono Nerd Font-10"))
+             '(font . "Hack Nerd Font-10"))
 
 (keymap-global-set "C-c f" 'find-name-dired)
 (keymap-global-set "C-c g" 'rgrep)
