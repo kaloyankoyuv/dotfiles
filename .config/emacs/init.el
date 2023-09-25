@@ -61,6 +61,16 @@
   (add-to-list 'completion-at-point-functions #'cape-dict)
   (add-to-list 'completion-at-point-functions #'cape-history)
   (add-to-list 'completion-at-point-functions #'cape-file))
+(use-package consult
+  :init
+  (keymap-global-set "M-y" 'consult-yank-pop)
+  (keymap-global-set "M-g g" 'consult-goto-line)
+  (keymap-global-set "M-g M-g" 'consult-goto-line)
+  (keymap-global-set "C-x b" 'consult-buffer)
+  (keymap-global-set "C-c c f" 'consult-find)
+  (keymap-global-set "C-c c g" 'consult-grep)
+  (keymap-global-set "C-c c l" 'consult-line)
+  (keymap-global-set "C-c c L" 'consult-line-multi))
 (use-package which-key
   :config (which-key-mode))
 (use-package magit)
