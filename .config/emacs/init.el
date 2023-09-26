@@ -77,13 +77,15 @@
 (use-package vterm
   :config
   (use-package multi-vterm
-    :init (keymap-global-set "C-c v" 'multi-vterm))
+    :init (keymap-global-set "C-c v v" 'multi-vterm))
   (use-package vterm-toggle
-    :init (keymap-global-set "C-c t" 'vterm-toggle)))
+    :init (keymap-global-set "C-c v t" 'vterm-toggle)))
 (use-package doom-themes
   :config (load-theme 'doom-one t))
 (use-package doom-modeline
   :config (doom-modeline-mode))
+(use-package treemacs
+  :init (keymap-global-set "C-c t" 'treemacs))
 (use-package minimap
   :init (setq minimap-window-location 'right)
   :config (minimap-mode))
