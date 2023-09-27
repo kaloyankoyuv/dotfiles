@@ -38,11 +38,11 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(use-package evil
-  :init
-  (setq evil-want-C-u-scroll t
-	evil-undo-system 'undo-redo)
-  (add-hook 'find-file-hook 'evil-local-mode))
+;; (use-package evil
+;;   :init
+;;   (setq evil-want-C-u-scroll t
+;; 	evil-undo-system 'undo-redo)
+;;   (add-hook 'find-file-hook 'evil-local-mode))
 (use-package vertico
   :config (vertico-mode))
 (use-package marginalia
