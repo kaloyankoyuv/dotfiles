@@ -87,8 +87,9 @@
 (use-package treemacs
   :init (keymap-global-set "C-c t" 'treemacs))
 (use-package minimap
-  :init (setq minimap-window-location 'right)
-  :config (minimap-mode))
+  :init
+  (setq minimap-window-location 'right)
+  (keymap-global-set "C-c m" 'minimap-mode))
 (use-package beacon
   :config (beacon-mode))
 (use-package lua-mode)
