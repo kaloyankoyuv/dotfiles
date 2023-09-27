@@ -29,7 +29,8 @@
 (add-hook 'find-file-hook
 	  (lambda ()
 	    (display-line-numbers-mode)
-	    (hl-line-mode)))
+	    (hl-line-mode)
+	    (display-fill-column-indicator-mode)))
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
