@@ -1,12 +1,10 @@
-(setq
- make-backup-files nil
- initial-scratch-message nil
- inhibit-startup-screen t
- scroll-conservatively 1000
- scroll-margin 5
- ring-bell-function 'ignore
- custom-file "~/.config/emacs/custom.el"
- )
+(setq make-backup-files nil
+      initial-scratch-message nil
+      inhibit-startup-screen t
+      scroll-conservatively 1000
+      scroll-margin 5
+      ring-bell-function 'ignore
+      custom-file "~/.config/emacs/custom.el")
 
 (menu-bar-mode 0)
 (tool-bar-mode 0)
@@ -19,7 +17,7 @@
 (pixel-scroll-precision-mode)
 
 (add-to-list 'default-frame-alist
-             '(font . "Hack Nerd Font-10"))
+             '(font . "SauceCodePro Nerd Font-10"))
 
 (keymap-global-set "C-c f" 'find-name-dired)
 (keymap-global-set "C-c g" 'rgrep)
@@ -39,11 +37,13 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;; (use-package evil
-;;   :init
-;;   (setq evil-want-C-u-scroll t
-;; 	evil-undo-system 'undo-redo)
-;;   (add-hook 'find-file-hook 'evil-local-mode))
+(use-package evil
+  :init
+  (setq evil-want-C-u-scroll t
+	evil-undo-system 'undo-redo
+	evil-default-state 'emacs)
+  (add-hook 'find-file-hook 'evil-normal-state)
+  :config (evil-mode))
 (use-package vertico
   :config (vertico-mode))
 (use-package marginalia
@@ -61,7 +61,8 @@
   (add-to-list 'completion-at-point-functions #'cape-abbrev)
   (add-to-list 'completion-at-point-functions #'cape-dict)
   (add-to-list 'completion-at-point-functions #'cape-history)
-  (add-to-list 'completion-at-point-functions #'cape-file))
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  (add-to-list 'completion-at-point-functions #'cape-keyword))
 (use-package consult
   :init
   (keymap-global-set "M-y" 'consult-yank-pop)
