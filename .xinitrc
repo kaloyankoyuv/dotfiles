@@ -3,7 +3,7 @@ emacs --daemon
 xwallpaper --maximize ~/dotfiles/wallpapers/samurai-doge.jpg
 picom -b
 /usr/bin/dunst &
-/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+/usr/lib/polkit-kde-authentication-agent-1 &
 
 while true; do
     xsetroot -name " $(acpi) | $(xkb-switch) | $(date)"
