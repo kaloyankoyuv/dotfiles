@@ -23,12 +23,16 @@
 (keymap-global-set "C-c g" 'rgrep)
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
+(keymap-global-set "C-c l e" 'eglot)
+(keymap-global-set "C-c l d" 'eglot-shutdown)
 
 (add-hook 'find-file-hook
 	  (lambda ()
 	    (display-line-numbers-mode)
 	    (hl-line-mode)
 	    (display-fill-column-indicator-mode)))
+
+(add-hook 'c++-mode-hook 'c++-ts-mode)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
