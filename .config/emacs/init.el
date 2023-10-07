@@ -37,13 +37,6 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;; (use-package evil
-;;   :init
-;;   (setq evil-want-C-u-scroll t
-;; 	evil-undo-system 'undo-redo
-;; 	evil-default-state 'emacs)
-;;   (add-hook 'find-file-hook 'evil-normal-state)
-;;   :config (evil-mode))
 (use-package vertico
   :config (vertico-mode))
 (use-package marginalia
@@ -57,13 +50,14 @@
   :config (global-corfu-mode))
 (use-package cape
   :init
-  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
-  (add-to-list 'completion-at-point-functions #'cape-abbrev)
-  (add-to-list 'completion-at-point-functions #'cape-dict)
-  (add-to-list 'completion-at-point-functions #'cape-history)
   (add-to-list 'completion-at-point-functions #'cape-file)
-  (add-to-list 'completion-at-point-functions #'cape-keyword)
-  (add-to-list 'completion-at-point-functions #'cape-line))
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  ;; (add-to-list 'completion-at-point-functions #'cape-abbrev)
+  ;; (add-to-list 'completion-at-point-functions #'cape-dict)
+  ;; (add-to-list 'completion-at-point-functions #'cape-history)
+  ;; (add-to-list 'completion-at-point-functions #'cape-keyword)
+  ;; (add-to-list 'completion-at-point-functions #'cape-line)
+  )
 (use-package consult
   :init
   (keymap-global-set "M-y" 'consult-yank-pop)
@@ -92,9 +86,7 @@
 (use-package minimap
   :init
   (setq minimap-window-location 'right)
-  (keymap-global-set "C-c m" 'minimap-mode)
-  :config (minimap-mode))
+  (keymap-global-set "C-c m" 'minimap-mode))
 (use-package beacon
   :config (beacon-mode))
-(use-package lua-mode)
-(use-package yaml-mode)
+
