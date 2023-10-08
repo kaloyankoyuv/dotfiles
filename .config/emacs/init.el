@@ -62,6 +62,7 @@
   ;; (add-to-list 'completion-at-point-functions #'cape-history)
   ;; (add-to-list 'completion-at-point-functions #'cape-line)
   )
+(use-package yasnippet)
 (use-package consult
   :init
   (keymap-global-set "M-y" 'consult-yank-pop)
