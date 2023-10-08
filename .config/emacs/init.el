@@ -20,14 +20,15 @@
 (add-to-list 'default-frame-alist
              '(font . "SauceCodePro Nerd Font-10"))
 
-(keymap-global-set "C-c f" 'find-name-dired)
+(keymap-global-set "C-c f n" 'find-name-dired)
+(keymap-global-set "C-c f g" 'find-grep-dired)
 (keymap-global-set "C-c g" 'rgrep)
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
 (keymap-global-set "C-c l e" 'eglot)
 (keymap-global-set "C-c l d" 'eglot-shutdown)
 
-(add-hook 'find-file-hook
+(add-hook 'prog-mode-hook
 	  (lambda ()
 	    (display-line-numbers-mode)
 	    (hl-line-mode)
@@ -58,11 +59,9 @@
   (add-to-list 'completion-at-point-functions #'cape-file)
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   (add-to-list 'completion-at-point-functions #'cape-keyword)
-  ;; (add-to-list 'completion-at-point-functions #'cape-abbrev)
-  ;; (add-to-list 'completion-at-point-functions #'cape-dict)
-  ;; (add-to-list 'completion-at-point-functions #'cape-history)
-  ;; (add-to-list 'completion-at-point-functions #'cape-line)
-  )
+  (add-to-list 'completion-at-point-functions #'cape-abbrev)
+  (add-to-list 'completion-at-point-functions #'cape-dict)
+  (add-to-list 'completion-at-point-functions #'cape-history))
 (use-package yasnippet)
 (use-package consult
   :init
