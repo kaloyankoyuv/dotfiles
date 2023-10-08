@@ -76,7 +76,7 @@
   :config (which-key-mode))
 (use-package magit)
 (use-package vterm
-  :config
+  :init
   (use-package multi-vterm
     :init (keymap-global-set "C-c v v" 'multi-vterm))
   (use-package vterm-toggle
