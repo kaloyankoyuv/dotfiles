@@ -31,8 +31,7 @@
 (add-hook 'prog-mode-hook
 	  (lambda ()
 	    (display-line-numbers-mode)
-	    (hl-line-mode)
-	    (display-fill-column-indicator-mode)))
+	    (hl-line-mode)))
 
 (add-hook 'c++-mode-hook 'c++-ts-mode)
 
