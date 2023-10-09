@@ -5,5 +5,3 @@
 !.config/tmux/tmux.conf
 !.config/dunst
 !.config/dunst/dunstrc
-.vim/**
-!.vim/vimrc
