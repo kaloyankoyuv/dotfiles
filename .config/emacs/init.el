@@ -46,7 +46,8 @@
 (add-hook 'prog-mode-hook
 	  (lambda ()
 	    (display-line-numbers-mode)
-	    (hl-line-mode)))
+	    (hl-line-mode)
+	    (flyspell-prog-mode)))
 
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
