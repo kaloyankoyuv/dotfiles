@@ -1,4 +1,4 @@
-(use-package modus-themes :ensure t)
+(use-package ef-themes :ensure t)
 (use-package yasnippet :ensure t)
 (use-package vertico :ensure t)
 (use-package marginalia :ensure t)
@@ -32,7 +32,7 @@
 (global-corfu-mode)
 (which-key-mode)
 
-(load-theme 'modus-vivendi t)
+(ef-themes-load-random 'dark)
 
 (add-to-list 'default-frame-alist
              '(font . "SauceCodePro Nerd Font-10"))
