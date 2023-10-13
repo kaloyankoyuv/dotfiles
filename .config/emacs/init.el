@@ -3,7 +3,9 @@
 (use-package vertico :ensure t)
 (use-package marginalia :ensure t)
 (use-package orderless :ensure t)
+(use-package consult :ensure t)
 (use-package corfu :ensure t)
+(use-package cape :ensure t)
 (use-package magit :ensure t)
 (use-package which-key :ensure t)
 (use-package eat :ensure t)
@@ -44,12 +46,23 @@
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
 (keymap-global-set "C-c t" 'eat)
+(keymap-global-set "M-y" 'consult-yank-pop)
+(keymap-global-set "M-g g" 'consult-goto-line)
+(keymap-global-set "M-g M-g" 'consult-goto-line)
+(keymap-global-set "C-x b" 'consult-buffer)
+(keymap-global-set "C-c c f" 'consult-find)
+(keymap-global-set "C-c c g" 'consult-grep)
+(keymap-global-set "C-c c l" 'consult-line)
+(keymap-global-set "C-c c L" 'consult-line-multi)
+
+(add-to-list 'completion-at-point-functions #'cape-dabbrev)
+(add-to-list 'completion-at-point-functions #'cape-dict)
+(add-to-list 'completion-at-point-functions #'cape-file)
 
 (add-hook 'prog-mode-hook
 	  (lambda ()
 	    (display-line-numbers-mode)
-	    (hl-line-mode)
-	    (flyspell-prog-mode)))
+	    (hl-line-mode)))
 
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
