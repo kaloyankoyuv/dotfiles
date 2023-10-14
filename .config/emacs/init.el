@@ -3,7 +3,6 @@
 (use-package vertico :ensure t)
 (use-package marginalia :ensure t)
 (use-package orderless :ensure t)
-(use-package consult :ensure t)
 (use-package corfu :ensure t)
 (use-package cape :ensure t)
 (use-package magit :ensure t)
@@ -18,7 +17,8 @@
       scroll-conservatively 1000
       scroll-margin 5
       ring-bell-function 'ignore
-      completion-styles '(orderless)
+      completion-styles '(orderless basic)
+      completion-category-overrides '((file (styles basic partial-completion)))
       custom-file "~/.config/emacs/custom.el")
 
 (menu-bar-mode 0)
@@ -47,14 +47,6 @@
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
 (keymap-global-set "C-c t" 'eat)
-(keymap-global-set "M-y" 'consult-yank-pop)
-(keymap-global-set "M-g g" 'consult-goto-line)
-(keymap-global-set "M-g M-g" 'consult-goto-line)
-(keymap-global-set "C-x b" 'consult-buffer)
-(keymap-global-set "C-c c f" 'consult-find)
-(keymap-global-set "C-c c g" 'consult-grep)
-(keymap-global-set "C-c c l" 'consult-line)
-(keymap-global-set "C-c c L" 'consult-line-multi)
 
 (add-to-list 'completion-at-point-functions #'cape-dabbrev)
 (add-to-list 'completion-at-point-functions #'cape-dict)
