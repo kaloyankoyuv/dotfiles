@@ -29,7 +29,8 @@
 (electric-pair-mode)
 (display-time-mode)
 (display-battery-mode)
-(pixel-scroll-precision-mode)
+(global-hl-line-mode)
+(global-display-line-numbers-mode)
 (vertico-mode)
 (marginalia-mode)
 (global-corfu-mode)
@@ -58,11 +59,6 @@
 (add-to-list 'completion-at-point-functions #'cape-dabbrev)
 (add-to-list 'completion-at-point-functions #'cape-dict)
 (add-to-list 'completion-at-point-functions #'cape-file)
-
-(add-hook 'prog-mode-hook
-	  (lambda ()
-	    (display-line-numbers-mode)
-	    (hl-line-mode)))
 
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
