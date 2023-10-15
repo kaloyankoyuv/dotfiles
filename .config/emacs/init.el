@@ -7,7 +7,6 @@
 (use-package cape :ensure t)
 (use-package magit :ensure t)
 (use-package which-key :ensure t)
-(use-package eat :ensure t)
 
 (setq make-backup-files nil
       initial-scratch-message nil
@@ -47,7 +46,6 @@
 (keymap-global-set "C-c g" 'rgrep)
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
-(keymap-global-set "C-c t" 'eat)
 
 (add-to-list 'completion-at-point-functions #'cape-dabbrev)
 (add-to-list 'completion-at-point-functions #'cape-dict)
