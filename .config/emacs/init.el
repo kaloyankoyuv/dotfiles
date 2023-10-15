@@ -16,6 +16,7 @@
       corfu-auto t
       scroll-conservatively 1000
       scroll-margin 5
+      display-line-numbers-type 'visual
       ring-bell-function 'ignore
       completion-styles '(orderless basic)
       completion-category-overrides '((file (styles basic partial-completion)))
