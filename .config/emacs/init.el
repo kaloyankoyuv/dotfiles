@@ -41,9 +41,6 @@
 (add-to-list 'default-frame-alist
              '(font . "SauceCodePro Nerd Font-10"))
 
-(keymap-global-set "C-c f n" 'find-name-dired)
-(keymap-global-set "C-c f g" 'find-grep-dired)
-(keymap-global-set "C-c g" 'rgrep)
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
 
