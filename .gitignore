@@ -1,6 +1,4 @@
 .config/**
-!.config/emacs
-!.config/emacs/init.el
 !.config/tmux
 !.config/tmux/tmux.conf
 !.config/dunst
