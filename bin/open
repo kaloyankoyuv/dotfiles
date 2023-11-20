@@ -1,3 +1,0 @@
-#!/bin/bash
-
-find | dmenu -i -l 20 | xargs -r xdg-open
