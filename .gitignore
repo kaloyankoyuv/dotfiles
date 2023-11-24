@@ -1,7 +1,0 @@
-.config/**
-!.config/tmux
-!.config/tmux/tmux.conf
-!.config/dunst
-!.config/dunst/dunstrc
-!.config/nvim
-!.config/nvim/init.lua
