@@ -30,7 +30,7 @@
 (global-hl-line-mode)
 (global-display-line-numbers-mode)
 
-(ef-themes-select 'ef-cherie)
+(ef-themes-load-random 'dark)
 
 (add-to-list 'default-frame-alist
              '(font . "Source Code Pro-10"))
