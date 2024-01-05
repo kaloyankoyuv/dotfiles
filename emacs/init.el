@@ -1,10 +1,5 @@
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
 (use-package ef-themes :ensure t)
 (use-package yasnippet :ensure t)
-(use-package magit :ensure t)
 
 (setq make-backup-files nil
       initial-scratch-message nil
@@ -15,7 +10,7 @@
       completion-auto-select t
       scroll-conservatively 1000
       scroll-margin 5
-      completions-max-height 15
+      completions-max-height 20
       display-line-numbers-type 'visual
       completions-format 'one-column
       ring-bell-function 'ignore
