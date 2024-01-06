@@ -45,6 +45,7 @@
 (keymap-global-set "C-c l" 'dln-hl-toggle)
 (keymap-global-set "C-c L" 'global-dln-hl-toggle)
 (keymap-global-set "C-c f" 'eglot-format)
+(keymap-global-set "C-c d" 'eglot-find-declaration)
 
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
