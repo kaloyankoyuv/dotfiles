@@ -70,6 +70,6 @@ static const struct arg args[] = {
         { battery_perc, " bat: %s%% |", "BAT0" },
 	{ wifi_essid, " wifi: %s |", "wlp3s0" },
   	{ keymap, " layout: %s |", NULL },
-	{ datetime, " %s ", "%F %T" },
+	{ datetime, " %s ", "%u %F %T" },
 
 };
