@@ -67,9 +67,10 @@ static const struct arg args[] = {
 	/* function format          argument */
         { cpu_perc, " cpu: %s%% |", NULL },
         { ram_used, " ram: %s |", NULL },
+	{ disk_used, " disk: %s |", "/"},
         { battery_perc, " bat: %s%% |", "BAT0" },
 	{ wifi_essid, " wifi: %s |", "wlp3s0" },
-  	{ keymap, " layout: %s |", NULL },
+  	{ keymap, " %s |", NULL },
 	{ datetime, " %s ", "%u %F %T" },
 
 };
