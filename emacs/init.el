@@ -30,20 +30,8 @@
 (add-to-list 'default-frame-alist
              '(font . "Source Code Pro-10"))
 
-(defun dln-hl-toggle ()
-  (interactive)
-  (hl-line-mode 'toggle)
-  (display-line-numbers-mode 'toggle))
-
-(defun global-dln-hl-toggle ()
-  (interactive)
-  (global-hl-line-mode 'toggle)
-  (global-display-line-numbers-mode 'toggle))
-
 (keymap-global-set "C-c b" 'ibuffer)
 (keymap-global-set "C-c e" 'eshell)
-(keymap-global-set "C-c l" 'dln-hl-toggle)
-(keymap-global-set "C-c L" 'global-dln-hl-toggle)
 (keymap-global-set "C-c f" 'eglot-format)
 (keymap-global-set "C-c d" 'eglot-find-declaration)
 
