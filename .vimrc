@@ -17,9 +17,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-let g:mapleader = " "
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
+let g:mapleader=" "
+let g:netrw_liststyle=3
+let g:netrw_banner=0
 
 nnoremap <leader>n :Lex<cr>
 nnoremap <leader>f :!clang-format -i %<cr>
