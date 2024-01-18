@@ -1,5 +1,6 @@
 (use-package ef-themes :ensure t)
 (use-package yasnippet :ensure t)
+(use-package magit :ensure t)
 
 (setq make-backup-files nil
       initial-scratch-message nil

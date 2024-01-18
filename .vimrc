@@ -17,6 +17,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
+set hidden
+
 let g:mapleader=" "
 let g:netrw_liststyle=3
 let g:netrw_banner=0
