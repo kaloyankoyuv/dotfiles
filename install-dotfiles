@@ -1,6 +1,5 @@
 #!/bin/bash
 
 ln -sf ~/dotfiles/.xinitrc ~/
-ln -sf ~/dotfiles/.vimrc ~/
 ln -sf ~/dotfiles/.config ~/
 
