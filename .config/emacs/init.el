@@ -53,3 +53,18 @@
 	evil-undo-system 'undo-redo)
   :config
   (evil-mode))
+(use-package vertico
+  :config
+  (vertico-mode))
+(use-package marginalia
+  :config
+  (marginalia-mode))
+(use-package corfu
+  :init
+  (setq corfu-auto t)
+  :config
+  (global-corfu-mode))
+(use-package orderless
+  :init
+  (setq completion-styles '(orderless basic)
+	completion-category-overrides '((file (styles basic partial-completion)))))
