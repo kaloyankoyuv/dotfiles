@@ -1,15 +1,10 @@
 (setq make-backup-files nil
       initial-scratch-message nil
-      completions-header-format nil
-      completion-show-help nil
       inhibit-startup-screen t
       undo-no-redo t
-      completion-auto-select t
       scroll-conservatively 1000
       scroll-margin 5
-      completions-max-height 20
       display-line-numbers-type 'visual
-      completions-format 'one-column
       ring-bell-function 'ignore
       custom-file "~/.config/emacs/custom.el")
 
