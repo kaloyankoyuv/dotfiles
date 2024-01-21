@@ -47,7 +47,7 @@
   (setq evil-want-C-u-scroll t
 	evil-undo-system 'undo-redo)
   :config
-  (evil-mode))
+  (evil-mode 0))
 (use-package vertico
   :config
   (vertico-mode))
@@ -63,3 +63,9 @@
   :init
   (setq completion-styles '(orderless basic)
 	completion-category-overrides '((file (styles basic partial-completion)))))
+(use-package which-key
+  :config
+  (which-key-mode))
+(use-package treemacs
+  :init
+  (keymap-global-set "C-c t" 'treemacs))
