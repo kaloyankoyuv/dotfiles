@@ -4,7 +4,7 @@
       undo-no-redo t
       scroll-conservatively 1000
       scroll-margin 5
-      display-line-numbers-type 'visual
+      display-line-numbers-type 'relative
       ring-bell-function 'ignore
       custom-file "~/.config/emacs/custom.el")
 
