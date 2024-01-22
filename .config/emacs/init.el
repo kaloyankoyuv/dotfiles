@@ -4,7 +4,7 @@
       undo-no-redo t
       scroll-conservatively 1000
       scroll-margin 5
-      display-line-numbers-type 'relative
+      display-line-numbers-type 'visual
       ring-bell-function 'ignore
       custom-file "~/.config/emacs/custom.el")
 
@@ -42,12 +42,6 @@
 (use-package doom-modeline
   :config
   (doom-modeline-mode))
-(use-package evil
-  :init
-  (setq evil-want-C-u-scroll t
-	evil-undo-system 'undo-redo)
-  :config
-  (evil-mode 0))
 (use-package vertico
   :config
   (vertico-mode))
