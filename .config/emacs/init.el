@@ -53,6 +53,10 @@
   (setq corfu-auto t)
   :config
   (global-corfu-mode))
+(use-package cape
+  :init
+  (add-to-list 'completion-at-point-functions 'cape-dabbrev)
+  (add-to-list 'completion-at-point-functions 'cape-file))
 (use-package orderless
   :init
   (setq completion-styles '(orderless basic)
