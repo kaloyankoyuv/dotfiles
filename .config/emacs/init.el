@@ -36,12 +36,9 @@
 
 (use-package yasnippet)
 (use-package magit)
-(use-package doom-themes
+(use-package modus-themes
   :config
-  (load-theme 'doom-one t))
-(use-package doom-modeline
-  :config
-  (doom-modeline-mode))
+  (modus-themes-select 'modus-vivendi))
 (use-package vertico
   :config
   (vertico-mode))
