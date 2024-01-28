@@ -1,14 +1,20 @@
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
+(use-package use-package
+  :custom
+  (use-package-always-ensure t))
 
-(require 'use-package)
-(setq use-package-always-ensure t)
+(use-package package
+  :init
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
 
 (use-package emacs
   :init
   (add-to-list 'default-frame-alist
                '(font . "SauceCodePro Nerd Font-10"))
+  (menu-bar-mode 0)
+  (tool-bar-mode 0)
+  (scroll-bar-mode 0)
+  (blink-cursor-mode 0)
+  (column-number-mode)
   :custom
   (make-backup-files nil)
   (initial-scratch-message nil)
@@ -16,21 +22,22 @@
   (undo-no-redo t)
   (scroll-conservatively 1000)
   (scroll-margin 5)
-  (display-line-numbers-type 'visual)
   (ring-bell-function 'ignore)
-  (custom-file "~/.config/emacs/custom.el")
-  :config
-  (menu-bar-mode 0)
-  (tool-bar-mode 0)
-  (scroll-bar-mode 0)
-  (blink-cursor-mode 0)
-  (column-number-mode)
-  (electric-pair-mode)
-  (recentf-mode)
+  (custom-file "~/.config/emacs/custom.el"))
+
+(use-package display-line-numbers
+  :custom
+  (display-line-numbers-type 'visual)
   :hook
-  (prog-mode . (lambda ()
-		 (hl-line-mode)
-		 (display-line-numbers-mode))))
+  (prog-mode . display-line-numbers-mode))
+
+(use-package hl-line
+  :hook
+  (prog-mode . hl-line-mode))
+
+(use-package elec-pair
+  :init
+  (electric-pair-mode))
 
 (use-package eshell
   :bind
@@ -39,6 +46,12 @@
 (use-package ibuffer
   :bind
   ("C-c b" . ibuffer))
+
+(use-package recentf
+  :init
+  (recentf-mode)
+  :bind
+  ("C-c r" . recentf))
 
 (use-package magit)
 
@@ -52,21 +65,21 @@
 (use-package yasnippet)
 
 (use-package modus-themes
-  :config
+  :init
   (modus-themes-select 'modus-vivendi))
 
 (use-package vertico
-  :config
+  :init
   (vertico-mode))
 
 (use-package marginalia
-  :config
+  :init
   (marginalia-mode))
 
 (use-package corfu
   :custom
   (corfu-auto t)
-  :config
+  :init
   (global-corfu-mode))
 
 (use-package cape
@@ -95,7 +108,7 @@
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
 (use-package which-key
-  :config
+  :init
   (which-key-mode))
 
 (use-package treemacs
