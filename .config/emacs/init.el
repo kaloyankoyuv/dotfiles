@@ -1,32 +1,3 @@
-(setq make-backup-files nil
-      initial-scratch-message nil
-      inhibit-startup-screen t
-      undo-no-redo t
-      scroll-conservatively 1000
-      scroll-margin 5
-      display-line-numbers-type 'visual
-      ring-bell-function 'ignore
-      custom-file "~/.config/emacs/custom.el")
-
-(menu-bar-mode 0)
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
-(blink-cursor-mode 0)
-(column-number-mode)
-(electric-pair-mode)
-(global-hl-line-mode)
-(global-display-line-numbers-mode)
-
-(add-to-list 'default-frame-alist
-             '(font . "SauceCodePro Nerd Font-10"))
-
-(keymap-global-set "C-c b" 'ibuffer)
-(keymap-global-set "C-c e" 'eshell)
-(keymap-global-set "C-c f" 'eglot-format)
-(keymap-global-set "C-c d" 'eglot-find-declaration)
-
-(add-hook 'c++-mode-hook 'eglot-ensure)
-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
@@ -34,8 +5,45 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(use-package yasnippet)
+(use-package emacs
+  :init
+  (add-to-list 'default-frame-alist
+               '(font . "SauceCodePro Nerd Font-10"))
+  :custom
+  (make-backup-files nil)
+  (initial-scratch-message nil)
+  (inhibit-startup-screen t)
+  (undo-no-redo t)
+  (scroll-conservatively 1000)
+  (scroll-margin 5)
+  (display-line-numbers-type 'visual)
+  (ring-bell-function 'ignore)
+  (custom-file "~/.config/emacs/custom.el")
+  :config
+  (menu-bar-mode 0)
+  (tool-bar-mode 0)
+  (scroll-bar-mode 0)
+  (blink-cursor-mode 0)
+  (column-number-mode)
+  (electric-pair-mode)
+  :hook
+  (prog-mode . (lambda ()
+		 (hl-line-mode)
+		 (display-line-numbers-mode))))
+(use-package eshell
+  :bind
+  ("C-c e" . eshell))
+(use-package ibuffer
+  :bind
+  ("C-c b" . ibuffer))
 (use-package magit)
+(use-package eglot
+  :bind
+  ("C-c f" . eglot-format)
+  ("C-c d" . eglot-find-declaration)
+  :hook
+  (c++-mode . eglot-ensure))
+(use-package yasnippet)
 (use-package modus-themes
   :config
   (modus-themes-select 'modus-vivendi))
@@ -46,8 +54,8 @@
   :config
   (marginalia-mode))
 (use-package corfu
-  :init
-  (setq corfu-auto t)
+  :custom
+  (corfu-auto t)
   :config
   (global-corfu-mode))
 (use-package cape
@@ -55,12 +63,13 @@
   (add-to-list 'completion-at-point-functions 'cape-dabbrev)
   (add-to-list 'completion-at-point-functions 'cape-file))
 (use-package orderless
-  :init
-  (setq completion-styles '(orderless basic)
-	completion-category-overrides '((file (styles basic partial-completion)))))
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles basic partial-completion)))))
 (use-package which-key
   :config
   (which-key-mode))
 (use-package treemacs
-  :init
-  (keymap-global-set "C-c t" 'treemacs))
+  :bind
+  ("C-c t" . treemacs))
+
