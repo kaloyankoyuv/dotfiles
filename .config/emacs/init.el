@@ -26,6 +26,7 @@
   (blink-cursor-mode 0)
   (column-number-mode)
   (electric-pair-mode)
+  (recentf-mode)
   :hook
   (prog-mode . (lambda ()
 		 (hl-line-mode)
@@ -72,6 +73,21 @@
   :init
   (add-to-list 'completion-at-point-functions 'cape-dabbrev)
   (add-to-list 'completion-at-point-functions 'cape-file))
+
+(use-package consult
+  :custom
+  (xref-show-xrefs-function 'consult-xref)
+  (xref-show-definition-function 'consult-xref)
+  :bind
+  ("C-x b" . consult-buffer)
+  ("C-y" . consult-yank-from-kill-ring)
+  ("M-y" . consult-yank-pop)
+  ("M-g g" . consult-goto-line)
+  ("M-g M-g" . consult-goto-line)
+  ("C-c c f" . consult-find)
+  ("C-c c g" . consult-grep)
+  ("C-c c l" . consult-line)
+  ("C-c c L" . consult-line-multi))
 
 (use-package orderless
   :custom
