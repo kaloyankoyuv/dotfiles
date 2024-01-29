@@ -49,9 +49,7 @@
 
 (use-package recentf
   :init
-  (recentf-mode)
-  :bind
-  ("C-c r" . recentf))
+  (recentf-mode))
 
 (use-package magit)
 
@@ -100,7 +98,8 @@
   ("C-c c f" . consult-find)
   ("C-c c g" . consult-grep)
   ("C-c c l" . consult-line)
-  ("C-c c L" . consult-line-multi))
+  ("C-c c L" . consult-line-multi)
+  ("C-c c r" . consult-recent-file))
 
 (use-package orderless
   :custom
