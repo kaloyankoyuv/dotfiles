@@ -1,6 +1,7 @@
 (use-package use-package
   :custom
-  (use-package-always-ensure t))
+  (use-package-always-ensure t)
+  (use-package-always-demand t))
 
 (use-package package
   :init
@@ -10,6 +11,7 @@
   :init
   (add-to-list 'default-frame-alist
                '(font . "SauceCodePro Nerd Font-10"))
+  :config
   (menu-bar-mode 0)
   (tool-bar-mode 0)
   (scroll-bar-mode 0)
@@ -36,7 +38,7 @@
   (prog-mode . hl-line-mode))
 
 (use-package elec-pair
-  :init
+  :config
   (electric-pair-mode))
 
 (use-package eshell
@@ -48,7 +50,7 @@
   ("C-c b" . ibuffer))
 
 (use-package recentf
-  :init
+  :config
   (recentf-mode))
 
 (use-package magit)
@@ -63,21 +65,21 @@
 (use-package yasnippet)
 
 (use-package modus-themes
-  :init
+  :config
   (modus-themes-select 'modus-vivendi))
 
 (use-package vertico
-  :init
+  :config
   (vertico-mode))
 
 (use-package marginalia
-  :init
+  :config
   (marginalia-mode))
 
 (use-package corfu
   :custom
   (corfu-auto t)
-  :init
+  :config
   (global-corfu-mode))
 
 (use-package cape
@@ -107,7 +109,7 @@
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
 (use-package which-key
-  :init
+  :config
   (which-key-mode))
 
 (use-package treemacs
