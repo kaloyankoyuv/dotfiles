@@ -50,6 +50,8 @@
   ("C-c b" . ibuffer))
 
 (use-package recentf
+  :bind
+  ("C-c r" . recentf)
   :config
   (recentf-mode))
 
@@ -86,22 +88,6 @@
   :init
   (add-to-list 'completion-at-point-functions 'cape-dabbrev)
   (add-to-list 'completion-at-point-functions 'cape-file))
-
-(use-package consult
-  :custom
-  (xref-show-xrefs-function 'consult-xref)
-  (xref-show-definition-function 'consult-xref)
-  :bind
-  ("C-x b" . consult-buffer)
-  ("C-y" . consult-yank-from-kill-ring)
-  ("M-y" . consult-yank-pop)
-  ("M-g g" . consult-goto-line)
-  ("M-g M-g" . consult-goto-line)
-  ("C-c c f" . consult-find)
-  ("C-c c g" . consult-grep)
-  ("C-c c l" . consult-line)
-  ("C-c c L" . consult-line-multi)
-  ("C-c c r" . consult-recent-file))
 
 (use-package orderless
   :custom
