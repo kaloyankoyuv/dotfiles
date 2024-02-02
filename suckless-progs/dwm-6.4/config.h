@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source Code Pro:size=10" };
-static const char dmenufont[]       = "Source Code Pro:size=10";
+static const char *fonts[]          = { "SauceCodePro Nerd Font:size=10" };
+static const char dmenufont[]       = "SauceCodePro Nerd Font:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -58,7 +58,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *emacscmd[] = { "emacsclient", "-nc", NULL };
+static const char *emacscmd[] = { "emacs", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *soundcmd[] = { "alacritty", "-e", "alsamixer", NULL };
 
