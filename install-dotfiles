@@ -1,5 +1,4 @@
 #!/bin/bash
 
-ln -sf ~/dotfiles/.xinitrc ~/
 ln -sf ~/dotfiles/.config ~/
 

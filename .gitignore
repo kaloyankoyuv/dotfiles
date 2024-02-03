@@ -3,6 +3,6 @@
 !.config/emacs/init.el
 !.config/hypr
 !.config/hypr/*
-!.config/alacritty
-!.config/alacritty/*
+!.config/foot
+!.config/foot/*
 
