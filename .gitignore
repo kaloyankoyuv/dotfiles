@@ -1,6 +1,8 @@
 .config/**
 !.config/emacs
 !.config/emacs/init.el
+!.config/hypr
+!.config/hypr/*
 !.config/alacritty
-!.config/alacritty/alacritty.toml
+!.config/alacritty/*
 
