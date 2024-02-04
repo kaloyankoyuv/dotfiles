@@ -9,9 +9,8 @@
 
 (use-package emacs
   :init
-  (add-to-list 'default-frame-alist
-	       '(alpha-background . 80)
-               '(font . "SauceCodePro Nerd Font-10"))
+  (add-to-list 'default-frame-alist '(font . "SauceCodePro Nerd Font-10"))
+  (add-to-list 'default-frame-alist '(alpha-background . 80))
   :config
   (menu-bar-mode 0)
   (tool-bar-mode 0)
