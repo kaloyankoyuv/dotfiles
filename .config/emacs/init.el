@@ -102,3 +102,11 @@
   :bind
   ("C-c t" . treemacs))
 
+(use-package beacon
+  :config
+  (beacon-mode))
+
+(use-package expand-region
+  :bind
+  ("C-c s" . er/expand-region))
+
