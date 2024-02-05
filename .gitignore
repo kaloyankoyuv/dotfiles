@@ -5,6 +5,6 @@
 !.config/hypr/*
 !.config/foot
 !.config/foot/*
-!.config/dunst
-!.config/dunst/*
+!.config/mako
+!.config/mako/*
 
