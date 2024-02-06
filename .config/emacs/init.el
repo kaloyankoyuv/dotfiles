@@ -76,6 +76,10 @@
   :hook
   (prog-mode . rainbow-mode))
 
+(use-package rainbow-delimiters
+  :hook
+  (prog-mode . rainbow-delimiters-mode))
+
 (use-package vertico
   :config
   (vertico-mode))
