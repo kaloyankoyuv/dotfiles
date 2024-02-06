@@ -115,3 +115,37 @@
   (global-diff-hl-mode)
   :hook
   (dired-mode . diff-hl-dired-mode))
+
+(use-package dashboard
+  :custom
+  (initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+  (dashboard-startup-banner 'logo)
+  (dashboard-center-content t)
+  (dashboard-projects-backend 'project-el)
+  (dashboard-items '((recents  . 10)
+		     (projects . 10)))
+  :config
+  (dashboard-setup-startup-hook))
+
+(use-package elfeed
+  :custom
+  (elfeed-feeds
+   '(
+     "https://reddit.com/r/linux.rss"
+     "https://reddit.com/r/bulgaria.rss"
+     "https://reddit.com/r/emacs.rss"
+     "https://www.phoronix.com/rss.php"
+     "https://news.itsfoss.com/latest/rss/"
+     "https://itsfoss.com/rss/"
+     "https://youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA" ; Brodie Robertson
+     "https://youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg" ; Distro Tube
+     "https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA" ; Mental Outlaw
+     "https://youtube.com/feeds/videos.xml?channel_id=UCq6VFHwMzcMXbuKyG7SQYIg" ; Moist Critical
+     "https://youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw" ; Linus Tech Tips
+     "https://youtube.com/feeds/videos.xml?channel_id=UCTzLRZUgelatKZ4nyIKcAbg" ; Hardware Canucks
+     "https://youtube.com/feeds/videos.xml?channel_id=UCBq5p-xOla8xhnrbhu8AIAg" ; Tech Over Tea
+     "https://youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ" ; MKBHD
+     "https://youtube.com/feeds/videos.xml?channel_id=UCpOZ5vixSKec-bWKDkyU_vg" ; Aethelthryth Clips
+     "https://youtube.com/feeds/videos.xml?channel_id=UCmw-QGOHbHA5cDAvwwqUTKQ" ; Zaney
+     )))
+
