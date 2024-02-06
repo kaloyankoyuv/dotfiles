@@ -116,6 +116,12 @@
   :hook
   (dired-mode . diff-hl-dired-mode))
 
+(use-package minimap
+  :custom
+  (minimap-window-location 'right)
+  :config
+  (minimap-mode))
+
 (use-package dashboard
   :custom
   (initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
