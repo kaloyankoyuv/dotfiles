@@ -19,8 +19,6 @@
   (column-number-mode)
   :custom
   (make-backup-files nil)
-  (initial-scratch-message nil)
-  (inhibit-startup-screen t)
   (undo-no-redo t)
   (scroll-conservatively 1000)
   (scroll-margin 5)
