@@ -110,3 +110,8 @@
   :bind
   ("C-c s" . er/expand-region))
 
+(use-package diff-hl
+  :config
+  (global-diff-hl-mode)
+  :hook
+  (dired-mode . diff-hl-dired-mode))
