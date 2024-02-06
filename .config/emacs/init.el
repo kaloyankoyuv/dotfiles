@@ -72,6 +72,10 @@
   :config
   (doom-modeline-mode))
 
+(use-package rainbow-mode
+  :hook
+  (prog-mode . rainbow-mode))
+
 (use-package vertico
   :config
   (vertico-mode))
