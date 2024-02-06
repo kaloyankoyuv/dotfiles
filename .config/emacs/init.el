@@ -64,9 +64,15 @@
 
 (use-package yasnippet)
 
+(use-package all-the-icons)
+
 (use-package doom-themes
+  :custom
+  (doom-themes-treemacs-enable-variable-pitch nil)
+  (doom-themes-treemacs-theme "doom-colors")
   :config
-  (load-theme 'doom-one t))
+  (load-theme 'doom-one t)
+  (doom-themes-treemacs-config))
 
 (use-package doom-modeline
   :config
