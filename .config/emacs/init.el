@@ -64,19 +64,13 @@
 
 (use-package yasnippet)
 
-(use-package all-the-icons)
-
-(use-package doom-themes
+(use-package modus-themes
   :custom
-  (doom-themes-treemacs-enable-variable-pitch nil)
-  (doom-themes-treemacs-theme "doom-colors")
+  (modus-themes-bold-constructs t)
+  (modus-themes-italic-constructs t)
+  (modus-themes-slanted-constructs t)
   :config
-  (load-theme 'doom-one t)
-  (doom-themes-treemacs-config))
-
-(use-package doom-modeline
-  :config
-  (doom-modeline-mode))
+  (load-theme 'modus-vivendi t))
 
 (use-package rainbow-mode
   :hook
@@ -125,10 +119,6 @@
   :bind
   ("C-c t" . treemacs))
 
-(use-package beacon
-  :config
-  (beacon-mode))
-
 (use-package expand-region
   :bind
   ("C-c s" . er/expand-region))
@@ -138,12 +128,6 @@
   (global-diff-hl-mode)
   :hook
   (dired-mode . diff-hl-dired-mode))
-
-(use-package minimap
-  :custom
-  (minimap-window-location 'right)
-  :config
-  (minimap-mode))
 
 (use-package dashboard
   :custom
