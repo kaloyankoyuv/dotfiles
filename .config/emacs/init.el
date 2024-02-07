@@ -132,8 +132,6 @@
   :custom
   (initial-buffer-choice 'dashboard-open)
   (dashboard-startup-banner 'logo)
-  (dashboard-set-heading-icons t)
-  (dashboard-set-file-icons t)
   (dashboard-center-content t)
   (dashboard-projects-backend 'project-el)
   (dashboard-items '((recents  . 10)
