@@ -68,7 +68,6 @@
   :custom
   (modus-themes-bold-constructs t)
   (modus-themes-italic-constructs t)
-  (modus-themes-slanted-constructs t)
   :config
   (load-theme 'modus-vivendi t))
 
