@@ -153,6 +153,8 @@
      "https://youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg" ; Distro Tube
      "https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA" ; Mental Outlaw
      "https://youtube.com/feeds/videos.xml?channel_id=UCq6VFHwMzcMXbuKyG7SQYIg" ; Moist Critical
+     "https://youtube.com/feeds/videos.xml?channel_id=UCQeRaTukNYft1_6AZPACnog" ; Asmongold
+     "https://youtube.com/feeds/videos.xml?channel_id=UCtMVHI3AJD4Qk4hcbZnI9ZQ" ; Some Ordinary Gamers
      "https://youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw" ; Linus Tech Tips
      "https://youtube.com/feeds/videos.xml?channel_id=UCTzLRZUgelatKZ4nyIKcAbg" ; Hardware Canucks
      "https://youtube.com/feeds/videos.xml?channel_id=UCBq5p-xOla8xhnrbhu8AIAg" ; Tech Over Tea
