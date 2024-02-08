@@ -128,6 +128,12 @@
   :hook
   (dired-mode . diff-hl-dired-mode))
 
+(use-package c-ts-mode
+  :init
+  (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c-or-c++-mode . c-or-c++-ts-mode)))
+
 (use-package dashboard
   :custom
   (initial-buffer-choice 'dashboard-open)
