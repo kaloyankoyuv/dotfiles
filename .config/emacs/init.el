@@ -155,6 +155,7 @@
      "https://www.phoronix.com/rss.php"
      "https://news.itsfoss.com/latest/rss/"
      "https://itsfoss.com/rss/"
+     "https://archlinux.org/feeds/news/"
      "https://youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA" ; Brodie Robertson
      "https://youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg" ; Distro Tube
      "https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA" ; Mental Outlaw
@@ -167,5 +168,8 @@
      "https://youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ" ; MKBHD
      "https://youtube.com/feeds/videos.xml?channel_id=UCpOZ5vixSKec-bWKDkyU_vg" ; Aethelthryth Clips
      "https://youtube.com/feeds/videos.xml?channel_id=UCmw-QGOHbHA5cDAvwwqUTKQ" ; Zaney
+     "https://youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA" ; Veritasium
+     "https://youtube.com/feeds/videos.xml?channel_id=UC5UAwBUum7CPN5buc-_N1Fw" ; The Linux Experiment
+     "https://youtube.com/feeds/videos.xml?channel_id=UCyXWqtekGVSLRz5Txwte6Bg" ; Don Brutar
      )))
 
