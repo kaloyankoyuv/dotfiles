@@ -98,12 +98,9 @@
   (add-to-list 'completion-at-point-functions 'cape-dabbrev)
   (add-to-list 'completion-at-point-functions 'cape-file))
 
-(use-package consult
-  :bind
-  ("C-x b" . consult-buffer)
-  ("C-y" . consult-yank-from-kill-ring)
-  ("M-g g" . consult-goto-line)
-  ("M-g M-g" . consult-goto-line))
+(use-package consult)
+
+(use-package crux)
 
 (use-package orderless
   :custom
