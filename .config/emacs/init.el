@@ -33,7 +33,10 @@
 
 (use-package hl-line
   :hook
-  (prog-mode . hl-line-mode))
+  (prog-mode . hl-line-mode)
+  (ibuffer-mode . hl-line-mode)
+  (dired-mode . hl-line-mode)
+  (dashboard-mode . hl-line-mode))
 
 (use-package elec-pair
   :config
