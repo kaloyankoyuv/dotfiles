@@ -134,14 +134,18 @@
   (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
   (add-to-list 'major-mode-remap-alist '(c-or-c++-mode . c-or-c++-ts-mode)))
 
+(use-package org
+  :custom
+  (org-agenda-files '("~/org-agenda")))
+
 (use-package dashboard
   :custom
   (initial-buffer-choice 'dashboard-open)
   (dashboard-startup-banner 'logo)
-  (dashboard-center-content t)
   (dashboard-projects-backend 'project-el)
   (dashboard-items '((recents  . 10)
-		     (projects . 10)))
+		     (projects . 10)
+		     (agenda . 10)))
   :config
   (dashboard-setup-startup-hook))
 
