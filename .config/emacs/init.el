@@ -139,6 +139,8 @@
   :custom
   (org-agenda-files '("~/org-agenda")))
 
+(use-package denote)
+
 (use-package dashboard
   :custom
   (initial-buffer-choice 'dashboard-open)
