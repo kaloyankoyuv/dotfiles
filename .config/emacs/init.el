@@ -137,9 +137,11 @@
 
 (use-package org
   :custom
-  (org-agenda-files '("~/org-agenda")))
+  (org-agenda-files '("~/org/agenda")))
 
-(use-package denote)
+(use-package denote
+  :custom
+  (denote-directory "~/org/denote"))
 
 (use-package dashboard
   :custom
