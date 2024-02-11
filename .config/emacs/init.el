@@ -175,5 +175,8 @@
      "https://youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA" ; Veritasium
      "https://youtube.com/feeds/videos.xml?channel_id=UC5UAwBUum7CPN5buc-_N1Fw" ; The Linux Experiment
      "https://youtube.com/feeds/videos.xml?channel_id=UCyXWqtekGVSLRz5Txwte6Bg" ; Don Brutar
+     "https://youtube.com/feeds/videos.xml?channel_id=UC1s1OsWNYDFgbROPV-q5arg" ; Michael Horn
+     "https://youtube.com/feeds/videos.xml?channel_id=UCJetJ7nDNLlEzDLXv7KIo0w" ; Gavin Freeborn
+     "https://youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw" ; 3Blue1Brown
      )))
 
