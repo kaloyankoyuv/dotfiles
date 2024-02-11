@@ -8,6 +8,13 @@
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
 
 (use-package emacs
+  :custom
+  (make-backup-files nil)
+  (undo-no-redo t)
+  (scroll-conservatively 1000)
+  (scroll-margin 5)
+  (ring-bell-function 'ignore)
+  (custom-file "~/.config/emacs/custom.el")
   :init
   (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-10"))
   (add-to-list 'default-frame-alist '(alpha-background . 80))
@@ -17,13 +24,7 @@
   (scroll-bar-mode 0)
   (blink-cursor-mode 0)
   (column-number-mode)
-  :custom
-  (make-backup-files nil)
-  (undo-no-redo t)
-  (scroll-conservatively 1000)
-  (scroll-margin 5)
-  (ring-bell-function 'ignore)
-  (custom-file "~/.config/emacs/custom.el"))
+  (load custom-file))
 
 (use-package display-line-numbers
   :custom
