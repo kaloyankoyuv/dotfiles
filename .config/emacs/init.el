@@ -163,7 +163,6 @@
   (elfeed-feeds
    '(
      "https://reddit.com/r/linux.rss"
-     "https://reddit.com/r/bulgaria.rss"
      "https://reddit.com/r/emacs.rss"
      "https://www.phoronix.com/rss.php"
      "https://news.itsfoss.com/latest/rss/"
