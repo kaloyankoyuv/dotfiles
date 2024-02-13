@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ln -sf ~/dotfiles/.config ~/
+ln -sf ~/Documents/git/dotfiles/.config ~/
 
