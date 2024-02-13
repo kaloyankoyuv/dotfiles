@@ -127,6 +127,11 @@
   :bind
   ("C-c s" . er/expand-region))
 
+(use-package drag-stuff
+  :config
+  (drag-stuff-define-keys)
+  (drag-stuff-global-mode))
+
 (use-package diff-hl
   :config
   (global-diff-hl-mode)
