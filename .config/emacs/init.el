@@ -64,6 +64,7 @@
   ("C-c f" . eglot-format)
   ("C-c d" . eglot-find-declaration)
   :hook
+  (c-ts-mode . eglot-ensure)
   (c++-ts-mode . eglot-ensure))
 
 (use-package yasnippet)
