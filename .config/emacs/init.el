@@ -103,10 +103,6 @@
 
 (use-package crux)
 
-(use-package vterm)
-
-(use-package eat)
-
 (use-package orderless
   :custom
   (completion-styles '(orderless basic))
