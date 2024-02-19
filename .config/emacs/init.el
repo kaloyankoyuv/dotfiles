@@ -11,10 +11,10 @@
   :custom
   (make-backup-files nil)
   (undo-no-redo t)
+  (inhibit-startup-screen t)
   (custom-file "~/.config/emacs/custom.el")
   :init
   (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-10"))
-  (add-to-list 'default-frame-alist '(alpha-background . 80))
   :config
   (menu-bar-mode 0)
   (tool-bar-mode 0)
