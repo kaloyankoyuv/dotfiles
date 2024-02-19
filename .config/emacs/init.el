@@ -32,8 +32,7 @@
   :hook
   (prog-mode . hl-line-mode)
   (ibuffer-mode . hl-line-mode)
-  (dired-mode . hl-line-mode)
-  (dashboard-mode . hl-line-mode))
+  (dired-mode . hl-line-mode))
 
 (use-package elec-pair
   :config
@@ -46,14 +45,6 @@
 (use-package ibuffer
   :bind
   ("C-c b" . ibuffer))
-
-(use-package recentf
-  :bind
-  ("C-c r" . recentf)
-  :config
-  (recentf-mode))
-
-(use-package magit)
 
 (use-package eglot
   :bind
