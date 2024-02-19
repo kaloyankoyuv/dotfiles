@@ -141,17 +141,6 @@
   :custom
   (denote-directory "~/Documents/org/denote"))
 
-(use-package dashboard
-  :custom
-  (initial-buffer-choice 'dashboard-open)
-  (dashboard-startup-banner 'logo)
-  (dashboard-projects-backend 'project-el)
-  (dashboard-items '((recents  . 10)
-		     (projects . 10)
-		     (agenda . 10)))
-  :config
-  (dashboard-setup-startup-hook))
-
 (use-package elfeed
   :custom
   (elfeed-feeds
