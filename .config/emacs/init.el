@@ -116,10 +116,6 @@
   :config
   (which-key-mode))
 
-(use-package treemacs
-  :bind
-  ("C-c t" . treemacs))
-
 (use-package expand-region
   :bind
   ("C-c s" . er/expand-region))
