@@ -158,9 +158,6 @@
   (initial-buffer-choice 'dashboard-open)
   (dashboard-startup-banner 'logo)
   (dashboard-projects-backend 'project-el)
-  (dashboard-items '((recents  . 10)
-		     (projects . 10)
-		     (agenda . 10)))
   :config
   (dashboard-setup-startup-hook))
 
