@@ -38,14 +38,6 @@
   :config
   (electric-pair-mode))
 
-(use-package eshell
-  :bind
-  ("C-c e" . eshell))
-
-(use-package ibuffer
-  :bind
-  ("C-c b" . ibuffer))
-
 (use-package eglot
   :bind
   ("C-c f" . eglot-format)
