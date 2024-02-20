@@ -91,15 +91,6 @@
   (completion-styles '(orderless basic))
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
-(use-package expand-region
-  :bind
-  ("C-c s" . er/expand-region))
-
-(use-package drag-stuff
-  :config
-  (drag-stuff-define-keys)
-  (drag-stuff-global-mode))
-
 (use-package c-ts-mode
   :init
   (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
