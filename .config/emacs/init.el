@@ -91,10 +91,6 @@
   (completion-styles '(orderless basic))
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
-(use-package which-key
-  :config
-  (which-key-mode))
-
 (use-package expand-region
   :bind
   ("C-c s" . er/expand-region))
