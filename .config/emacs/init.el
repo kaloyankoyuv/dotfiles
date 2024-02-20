@@ -10,7 +10,6 @@
 (use-package emacs
   :custom
   (make-backup-files nil)
-  (undo-no-redo t)
   (inhibit-startup-screen t)
   (custom-file "~/.config/emacs/custom.el")
   :init
