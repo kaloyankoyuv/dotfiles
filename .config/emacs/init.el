@@ -100,12 +100,6 @@
   (drag-stuff-define-keys)
   (drag-stuff-global-mode))
 
-(use-package diff-hl
-  :config
-  (global-diff-hl-mode)
-  :hook
-  (dired-mode . diff-hl-dired-mode))
-
 (use-package c-ts-mode
   :init
   (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
