@@ -25,13 +25,11 @@
   :custom
   (display-line-numbers-type 'visual)
   :hook
-  (prog-mode . display-line-numbers-mode))
+  (find-file . display-line-numbers-mode))
 
 (use-package hl-line
   :hook
-  (prog-mode . hl-line-mode)
-  (ibuffer-mode . hl-line-mode)
-  (dired-mode . hl-line-mode))
+  (find-file . hl-line-mode))
 
 (use-package elec-pair
   :config
