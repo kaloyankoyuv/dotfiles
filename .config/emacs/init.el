@@ -10,7 +10,11 @@
 (use-package emacs
   :custom
   (make-backup-files nil)
+  (completion-show-help nil)
   (inhibit-startup-screen t)
+  (completion-auto-select t)
+  (completions-max-height 20)
+  (completions-format 'one-column)
   (custom-file "~/.config/emacs/custom.el")
   :init
   (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-10"))
@@ -51,29 +55,6 @@
   (modus-themes-italic-constructs t)
   :config
   (load-theme 'modus-vivendi t))
-
-(use-package vertico
-  :config
-  (vertico-mode))
-
-(use-package marginalia
-  :config
-  (marginalia-mode))
-
-(use-package corfu
-  :custom
-  (corfu-auto t)
-  :config
-  (global-corfu-mode))
-
-(use-package consult)
-
-(use-package crux)
-
-(use-package orderless
-  :custom
-  (completion-styles '(orderless basic))
-  (completion-category-overrides '((file (styles basic partial-completion)))))
 
 (use-package c-ts-mode
   :init
