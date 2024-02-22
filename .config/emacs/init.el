@@ -80,6 +80,9 @@
      "https://news.itsfoss.com/latest/rss/"
      "https://itsfoss.com/rss/"
      "https://archlinux.org/feeds/news/"
+     "https://news.ycombinator.com/rss"
+     "https://feeds.arstechnica.com/arstechnica/index"
+     "https://rss.slashdot.org/Slashdot/slashdotMain"
      "https://youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA" ; Brodie Robertson
      "https://youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg" ; Distro Tube
      "https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA" ; Mental Outlaw
