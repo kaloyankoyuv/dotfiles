@@ -62,14 +62,6 @@
   (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
   (add-to-list 'major-mode-remap-alist '(c-or-c++-mode . c-or-c++-ts-mode)))
 
-(use-package org
-  :custom
-  (org-agenda-files '("~/Documents/org/agenda")))
-
-(use-package denote
-  :custom
-  (denote-directory "~/Documents/org/denote"))
-
 (use-package elfeed
   :custom
   (elfeed-feeds
