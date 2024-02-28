@@ -17,7 +17,7 @@
   (completions-format 'one-column)
   (custom-file "~/.config/emacs/custom.el")
   :init
-  (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-10"))
+  (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
   :config
   (menu-bar-mode 0)
   (tool-bar-mode 0)
