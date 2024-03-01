@@ -11,7 +11,6 @@
   :custom
   (make-backup-files nil)
   (completion-show-help nil)
-  (inhibit-startup-screen t)
   (completion-auto-select t)
   (completions-max-height 20)
   (completions-format 'one-column)
@@ -22,18 +21,7 @@
   (menu-bar-mode 0)
   (tool-bar-mode 0)
   (scroll-bar-mode 0)
-  (blink-cursor-mode 0)
   (load custom-file))
-
-(use-package display-line-numbers
-  :custom
-  (display-line-numbers-type 'visual)
-  :hook
-  (find-file . display-line-numbers-mode))
-
-(use-package hl-line
-  :hook
-  (find-file . hl-line-mode))
 
 (use-package elec-pair
   :config
