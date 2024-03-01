@@ -44,8 +44,8 @@
   ("C-c f" . eglot-format)
   ("C-c d" . eglot-find-declaration)
   :hook
-  (c-ts-mode . eglot-ensure)
-  (c++-ts-mode . eglot-ensure))
+  (c-mode . eglot-ensure)
+  (c++-mode . eglot-ensure))
 
 (use-package yasnippet)
 
@@ -55,12 +55,6 @@
   (modus-themes-italic-constructs t)
   :config
   (load-theme 'modus-vivendi t))
-
-(use-package c-ts-mode
-  :init
-  (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
-  (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
-  (add-to-list 'major-mode-remap-alist '(c-or-c++-mode . c-or-c++-ts-mode)))
 
 (use-package elfeed
   :custom
