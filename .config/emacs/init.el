@@ -11,6 +11,8 @@
   :custom
   (make-backup-files nil)
   (completion-show-help nil)
+  (initial-scratch-message nil)
+  (inhibit-startup-screen t)
   (completion-auto-select t)
   (completions-max-height 20)
   (completions-format 'one-column)
